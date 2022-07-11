@@ -32,7 +32,7 @@ fn main() {
     diesel::insert_into(posts::table).values(&new_posts).get_result::<Post>(&connection_db).expect("Error Insert Tables");
     // let post: Post = diesel::insert_into(posts::table).values(&new_posts).get_result(&connection_db).expect("Error Insert Tables");
 
-    // Select * from posts limit 1
+    // Select * from posts limit 1CfxDPafaHJuw72
     let posts_result = posts.limit(1).load::<Post>(&connection_db).expect("Error ejecute query");
 
     for post in posts_result {
